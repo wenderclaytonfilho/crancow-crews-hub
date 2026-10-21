@@ -1,29 +1,23 @@
-# Crancow Crews — Recomp Hub
+# Crancow Crews Recomp Hub
 
-Site Next.js pronto para publicar na Vercel. **Sem login, painel administrativo ou banco de dados**.
+Site Next.js sem login e sem banco de dados. Pronto para importar no GitHub e publicar na Vercel.
 
-## Editar publicações
+## Editar jogos
+Abra `lib/data.ts`. Cada entrada tem:
+- `title`: nome
+- `platform`: plataforma
+- `author`: quem enviou
+- `created_at`: data YYYY-MM-DD
+- `github_url`: projeto/recomp
+- `room_url`: ROOM / arquivos do jogo
+- `cover_url`: capa (ex.: `/capas/tenkaichi3.jpg`)
 
-Abra `lib/data.ts` e edite a lista `seed`. Cada entrada possui, nesta ordem:
-
-`[nome do jogo, plataforma, nome de quem enviou, data AAAA-MM-DD, link do GitHub]`
-
-Para adicionar outro jogo, copie uma linha e altere os valores. Para mudar a capa de um jogo, coloque o arquivo na pasta `public/capas/` e edite o campo `cover_url` do item (exemplo: `/capas/jogo.jpg`). A imagem da crew fica em `public/crancow-crews.jpg`.
+## Capas
+O site tenta buscar automaticamente capas na Wikipedia quando `cover_url` está vazio. Como é uma fonte externa, a imagem pode falhar ou não ser a arte correta. **Para garantir uma capa**, salve a imagem em `public/capas/` e coloque seu caminho em `cover_url`. As capas podem ser `.jpg`, `.png` ou `.webp`.
 
 ## Publicar
+1. Envie os arquivos para um repositório GitHub (com `package.json` na raiz).
+2. Importe em vercel.com/new com Framework Next.js.
+3. Deploy. Não requer variáveis de ambiente.
 
-1. Envie a pasta do projeto para um repositório GitHub.
-2. Na Vercel, escolha **Add New → Project** e importe o repositório.
-3. Framework: Next.js. Clique em Deploy. Não é necessário configurar variáveis de ambiente.
-4. Para atualizar o catálogo, altere `lib/data.ts`, faça commit e push; a Vercel publicará automaticamente.
-
-## Rodar localmente
-
-```bash
-npm install
-npm run dev
-```
-
-Visite http://localhost:3000.
-
-**Atenção:** verifique os repositórios externos antes de divulgar e compartilhe apenas arquivos que você tem permissão para distribuir.
+Os links de ROOM foram transcritos das capturas fornecidas, sem validação de disponibilidade ou de direitos de distribuição. A publicação deve respeitar os direitos autorais aplicáveis.

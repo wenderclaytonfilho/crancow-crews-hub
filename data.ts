@@ -1,0 +1,16 @@
+// Edite as publicações aqui. cover_url aceita uma imagem em /public/capas ou uma URL HTTPS.
+export type Post = {id:string;title:string;platform:string;author:string;created_at:string;github_url:string;room_url:string;cover_url:string;description:string;status:string};
+const entries: Omit<Post,'id'|'description'|'status'>[] = [
+{title:'Dragon Ball Z: Budokai Tenkaichi 3',platform:'PS2',author:'Carlos',created_at:'2026-10-20',github_url:'https://github.com/z3xox/Tenkaichi3Decomp/releases/tag/v0.1.38',room_url:'https://romsfun.com/download/dragonball-z-budokai-tenkaichi-3-1-12934/2',cover_url:''},
+{title:'Dragon Ball Z: Budokai 3 HD Collection',platform:'PS3',author:'Carlos',created_at:'2026-10-18',github_url:'https://github.com/novapowers0/DBZ-Budokai-3-HD-Collection/releases/tag/v1.5.1.3',room_url:'https://drive.google.com/file/d/1jKa-Q-nOiWPJo_jgqMXNy9PrqWvVobSd/view?usp=drivesdk',cover_url:''},
+{title:'Dragon Ball Z: Burst Limit',platform:'PS3',author:'Carlos',created_at:'2026-10-18',github_url:'https://github.com/iExplosiveRage/DBZ-Burst-Limit-Recompiled/releases/tag/v0.6.1-alpha',room_url:'https://vimm.net/vault/88323',cover_url:''},
+{title:'Super Smash Bros. Ultimate',platform:'Switch',author:'Carlos',created_at:'2026-10-18',github_url:'https://github.com/madkils/BurstLimit-PC-Port-Public-Beta-1/releases',room_url:'',cover_url:''},
+{title:'Super Mario Galaxy',platform:'Wii',author:'Carlos',created_at:'2026-10-20',github_url:'https://github.com/keepvaibin/nebula/releases/tag/v1.0.0',room_url:'https://romsfun.com/download/super-mario-galaxy-56323-13279/3',cover_url:''},
+{title:'Def Jam: Fight for NY',platform:'PS2',author:'Carlos',created_at:'2026-10-20',github_url:'https://github.com/vyanhursky/DefJamFFNY-recomp/releases/tag/v0.10.5',room_url:'https://romsfun.com/download/def-jam-fight-for-ny-4-99886/3',cover_url:''},
+{title:'God of War III',platform:'PS3',author:'Carlos',created_at:'2026-10-20',github_url:'https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v2.6.0',room_url:'https://gofile.io/d/BVJTFZhD',cover_url:''},
+{title:'Crash Team Racing Nitro-Fueled',platform:'PS4',author:'Carlos',created_at:'2026-10-14',github_url:'https://github.com/Ryu7w7/OCTR-NitroFueled-PC/releases/tag/v0.4',room_url:'https://romsfun.com/download/crash-team-racing-nitro-fueled-90586',cover_url:''},
+{title:'Shadow of the Colossus',platform:'PS2',author:'Carlos',created_at:'2026-10-14',github_url:'https://github.com/AjncSystem/ShadowOfTheColossus-PC',room_url:'https://romsfun.com/download/shadow-of-the-colossus-20589-40302/1',cover_url:''},
+{title:'inFAMOUS Second Son',platform:'PS4',author:'Carlos',created_at:'2026-10-14',github_url:'https://github.com/HayatoG/iss_pc',room_url:'',cover_url:''},
+{title:'Forza Horizon',platform:'Xbox 360',author:'Carlos',created_at:'2026-10-13',github_url:'',room_url:'',cover_url:''},
+];
+export const seed:Post[]=entries.map((p,i)=>({...p,id:`seed-${i}`,description:'Projeto de recompilação ou port para PC. Consulte o repositório para instruções e compatibilidade.',status:'Em desenvolvimento'}));
