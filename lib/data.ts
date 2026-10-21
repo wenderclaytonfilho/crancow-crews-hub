@@ -1,7 +1,7 @@
 // Edite as publicações aqui. cover_url aceita uma imagem em /public/capas ou uma URL HTTPS.
 export type Post = {id:string;title:string;platform:string;author:string;created_at:string;github_url:string;room_url:string;cover_url:string;description:string;status:string};
 const entries: Omit<Post,'id'|'description'|'status'>[] = [
-{title:'Bloodborne',platform:'PS4',author:'Carlos',created_at:'2026-10-21',github_url:'https://github.com/Supermedo/bloodborne_pc',room_url:'https://drive.google.com/file/d/1v_3tJP1t_K6OFHqMU42v9FUHNYPlNMOs/view?usp=sharing',cover_url:''},
+{title:'Bloodborne',platform:'PS4',author:'Carlos',created_at:'2026-10-21',github_url:'https://github.com/Supermedo/bloodborne_pc',room_url:'https://drive.google.com/file/d/1v_3tJP1t_K6OFHqMU42v9FUHNYPlNMOs/view?usp=sharing',cover_url:'https://raw.githubusercontent.com/wenderclaytonfilho/crancow-crews-hub/refs/heads/main/public/capas/KKLEVc2SIIgrFVjsZChZJk1d.avif'},
 {title:'Dragon Ball Z: Budokai Tenkaichi 3',platform:'PS2',author:'Carlos',created_at:'2026-10-20',github_url:'https://github.com/z3xox/Tenkaichi3Decomp/releases/tag/v0.1.38',room_url:'https://romsfun.com/download/dragonball-z-budokai-tenkaichi-3-1-12934/2',cover_url:''},
 {title:'Dragon Ball Z: Budokai 3 HD Collection',platform:'PS3',author:'Carlos',created_at:'2026-10-18',github_url:'https://github.com/novapowers0/DBZ-Budokai-3-HD-Collection/releases/tag/v1.5.1.3',room_url:'https://drive.google.com/file/d/1qd803xqCto-RBpILcs08G3rLbSlmb9DO/view?usp=sharing',cover_url:''},
 {title:'Dragon Ball Z: Burst Limit',platform:'PS3',author:'Carlos',created_at:'2026-10-18',github_url:'https://github.com/iExplosiveRage/DBZ-Burst-Limit-Recompiled/releases/tag/v0.7.0-alpha',room_url:'https://vimm.net/vault/88323',cover_url:''},
