@@ -1,1 +1,0 @@
-Adicione suas capas aqui e preencha cover_url em lib/data.ts.
