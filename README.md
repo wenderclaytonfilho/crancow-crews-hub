@@ -1,23 +1,25 @@
 # Crancow Crews Recomp Hub
 
-Site Next.js sem login e sem banco de dados. Pronto para importar no GitHub e publicar na Vercel.
+Site Next.js para publicar na Vercel, sem login e sem banco de dados.
 
-## Editar jogos
-Abra `lib/data.ts`. Cada entrada tem:
-- `title`: nome
-- `platform`: plataforma
-- `author`: quem enviou
-- `created_at`: data YYYY-MM-DD
-- `github_url`: projeto/recomp
-- `room_url`: ROOM / arquivos do jogo
-- `cover_url`: capa (ex.: `/capas/tenkaichi3.jpg`)
+## Estrutura (não mova os arquivos)
+- `app/page.tsx`: interface
+- `app/layout.tsx` e `app/style.css`: estrutura e estilos
+- `lib/data.ts`: lista de jogos, autores, datas e links
+- `public/crancow-crews.jpg`: imagem da crew
+- `public/capas/`: capas locais opcionais
 
-## Capas
-O site tenta buscar automaticamente capas na Wikipedia quando `cover_url` está vazio. Como é uma fonte externa, a imagem pode falhar ou não ser a arte correta. **Para garantir uma capa**, salve a imagem em `public/capas/` e coloque seu caminho em `cover_url`. As capas podem ser `.jpg`, `.png` ou `.webp`.
+## Rodar
+```bash
+npm install
+npm run build
+npm run dev
+```
 
-## Publicar
-1. Envie os arquivos para um repositório GitHub (com `package.json` na raiz).
-2. Importe em vercel.com/new com Framework Next.js.
-3. Deploy. Não requer variáveis de ambiente.
+## Vercel
+Envie o **conteúdo desta pasta** para a raiz do repositório GitHub, mantendo `app/`, `lib/`, `public/` e `package.json` no mesmo nível. Importe o repositório na Vercel com framework Next.js e Root Directory `./`. Não mova `page.tsx` para a raiz: ele deve ficar em `app/page.tsx`.
 
-Os links de ROOM foram transcritos das capturas fornecidas, sem validação de disponibilidade ou de direitos de distribuição. A publicação deve respeitar os direitos autorais aplicáveis.
+## Editar
+Abra `lib/data.ts` para editar as publicações. `room_url` é o campo do link da ROM/arquivos; `github_url` é o projeto. Para uma capa própria, coloque a imagem em `public/capas/nome.jpg` e use `cover_url:'/capas/nome.jpg'`. Se `cover_url` estiver vazio, o site tentará buscar uma imagem na Wikipedia e, se não conseguir, mostrará uma capa genérica.
+
+**Nota:** links externos são fornecidos pelos membros da comunidade e não foram validados. Verifique licenças e direitos de distribuição.
