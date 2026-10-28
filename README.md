@@ -1,25 +1,26 @@
-# Crancow Crews Recomp Hub
+# Crancow Crews — Game Portal
 
-Site Next.js para publicar na Vercel, sem login e sem banco de dados.
+Portal gamer em Next.js 15, com identidade visual nova, assets criados exclusivamente para o projeto, catálogo filtrável, destaques e links para os repositórios.
 
-## Estrutura (não mova os arquivos)
-- `app/page.tsx`: interface
-- `app/layout.tsx` e `app/style.css`: estrutura e estilos
-- `lib/data.ts`: lista de jogos, autores, datas e links
-- `public/crancow-crews.jpg`: imagem da crew
-- `public/capas/`: capas locais opcionais
+## Rodar localmente
 
-## Rodar
 ```bash
 npm install
-npm run build
 npm run dev
 ```
 
-## Vercel
-Envie o **conteúdo desta pasta** para a raiz do repositório GitHub, mantendo `app/`, `lib/`, `public/` e `package.json` no mesmo nível. Importe o repositório na Vercel com framework Next.js e Root Directory `./`. Não mova `page.tsx` para a raiz: ele deve ficar em `app/page.tsx`.
+Abra http://localhost:3000. Para testar produção, execute `npm run build` e `npm run start`.
 
-## Editar
-Abra `lib/data.ts` para editar as publicações. `room_url` é o campo do link da ROM/arquivos; `github_url` é o projeto. Para uma capa própria, coloque a imagem em `public/capas/nome.jpg` e use `cover_url:'/capas/nome.jpg'`. Se `cover_url` estiver vazio, o site tentará buscar uma imagem na Wikipedia e, se não conseguir, mostrará uma capa genérica.
+## Publicação
 
-**Nota:** links externos são fornecidos pelos membros da comunidade e não foram validados. Verifique licenças e direitos de distribuição.
+Suba esta pasta para o GitHub e importe o repositório na Vercel (framework Next.js). Nenhum banco de dados nem variável de ambiente é necessário.
+
+## Editar os jogos
+
+Edite `lib/data.ts`. As capas estão em `public/capas/` e a identidade visual nova em `public/assets/` (banner e nove faixas ilustradas). Atualize `cover_url` com caminhos locais como `/capas/capa.webp`.
+
+Os botões de links externos apontam para o conteúdo já existente na versão original. Cada projeto é responsabilidade de seus respectivos autores; confira direitos de uso e licenças.
+
+## Design
+
+Paleta escura azul-marinho e violeta; imagens próprias geradas para a identidade do portal. Componentes adaptados para celular, tablet e desktop.
