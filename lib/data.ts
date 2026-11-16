@@ -1,6 +1,7 @@
 // Edite as publicações aqui. cover_url aceita uma imagem em /public/capas ou uma URL HTTPS.
 export type Post = {id:string;title:string;platform:string;author:string;created_at:string;github_url:string;room_url:string;cover_url:string;description:string;status:string};
 const entries: Omit<Post,'id'|'description'|'status'>[] = [
+{title:'Astro Bot',platform:'PS5',author:'Carlos',created_at:'2026-11-16',github_url:'https://github.com/imnotsharingmyname/pcportastrobot',room_url:'',cover_url:'https://raw.githubusercontent.com/wenderclaytonfilho/crancow-crews-hub/refs/heads/main/public/capas/astrobot-wn5ucu5soh.webp'},
 {title:'Black',platform:'PS2',author:'Carlos',created_at:'2026-10-25',github_url:'https://github.com/TGP482/BLACK-XBERecomp',room_url:'https://buzzheavier.com/jb9t7qvv086b',cover_url:'/capas/f37369e47b9a492346a26cd12ea666b8.jpg'},
 {title:'Bloodborne',platform:'PS4',author:'Carlos',created_at:'2026-10-21',github_url:'https://github.com/Supermedo/bloodborne_pc',room_url:'https://drive.google.com/file/d/1v_3tJP1t_K6OFHqMU42v9FUHNYPlNMOs/view?usp=sharing',cover_url:'/capas/KKLEVc2SIIgrFVjsZChZJk1d.avif'},
 {title:'Crash Team Racing Nitro-Fueled',platform:'PS4',author:'Carlos',created_at:'2026-10-14',github_url:'https://github.com/GetLostIn/CTR-NitroFueled-PC',room_url:'https://romsfun.com/download/crash-team-racing-nitro-fueled-90586',cover_url:'/capas/54604e9a2dfd69c7cacef0faf07b2189b9f31c746655590e011a533eb7f79b8d.avif'},
